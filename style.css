@@ -88,7 +88,7 @@ nav > ul li i {
     width: 582px;
     font-weight: 700;
     font-size: 3.25rem;
-    line-height: 70px;
+
 }
 
 .banner-disc{
@@ -105,6 +105,7 @@ nav > ul li i {
     background-image: url("./assets/images/Circle\ design.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .banner-right img{
     width: 440px;
@@ -124,4 +125,62 @@ nav > ul li i {
 .logo img{
     width: 100%;
     height: 100%;
+}
+
+
+/* mobile responcibe */
+
+@media screen and (max-width: 576px) {
+    .contaner{
+        width: auto;
+        margin: 0 16px;
+    }
+
+    nav, ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .banner-left{
+        align-items: center;
+    }
+    .banner-tittle{
+        width: calc(100% - 32px);
+        font-size: 1.75rem;
+    }
+    
+    .banner-disc{
+        width: auto;
+        background-size: auto;
+        font-size: 0.875rem;
+    }
+    .banner-right{
+        width: 257px;
+        height: 257px;
+    }
+    .banner-right img{
+        width: 202px;
+    }
+    .logo{
+        flex-wrap: wrap;
+        width: auto;
+        margin: 3rem 0;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-top: none;
+        border-bottom: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 576px) {
+    
 }
