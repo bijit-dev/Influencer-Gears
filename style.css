@@ -13,7 +13,7 @@ body{
 }
 
 .contaner{
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 a{
@@ -67,7 +67,7 @@ nav > ul li a{
 }
 
 nav > ul li i {
-    width: 24px;
+    max-width: 24px;
     height: 24px;
 }
 
@@ -85,14 +85,14 @@ nav > ul li i {
     gap: 1rem; 
 }
 .banner-tittle{
-    width: 582px;
+    max-width: 582px;
     font-weight: 700;
     font-size: 3.25rem;
 
 }
 
 .banner-disc{
-    width: 505px;
+    max-width: 505px;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -108,12 +108,12 @@ nav > ul li i {
     background-size: cover;
 }
 .banner-right img{
-    width: 440px;
+    max-width: 440px;
 }
 
 /* logo style  */
 .logo{
-    width: 1110px;
+    max-width: 1110px;
     margin: 4rem auto;
     display: flex;
     justify-content: space-between;
@@ -130,16 +130,16 @@ nav > ul li i {
 
 /* mobile responcibe */
 
-@media screen and (max-width: 576px) {
-    .contaner{
-        width: auto;
-        margin: 0 16px;
-    }
+@media only screen and (max-width: 576px) {
 
-    nav, ul{
+    nav{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    nav > ul {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
     .banner{
         flex-direction: column-reverse;
@@ -149,29 +149,28 @@ nav > ul li i {
         align-items: center;
     }
     .banner-tittle{
-        width: calc(100% - 32px);
+        max-width: calc(100% - 32px);
         font-size: 1.75rem;
     }
     
     .banner-disc{
-        width: auto;
+        /* max-width: auto; */
         background-size: auto;
         font-size: 0.875rem;
     }
     .banner-right{
-        width: 257px;
+        max-width: 257px;
         height: 257px;
     }
     .banner-right img{
-        width: 202px;
+        width: 220px;
     }
     .logo{
         flex-wrap: wrap;
-        width: auto;
         margin: 3rem 0;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 0.25rem 1rem;
         padding: 1rem;
         border-top: none;
         border-bottom: none;
@@ -181,6 +180,22 @@ nav > ul li i {
 }
 
 
-@media screen and (max-width: 576px) {
-    
+@media screen and (min-width: 576px) and (max-width: 976px) {
+    nav{
+        margin: 0 1.5rem;
+    }
+    .banner{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .banner-left{
+        align-items: center;
+    }
+    .logo{
+        flex-wrap: wrap;
+        margin: 3rem 0;
+        justify-content: center;
+        gap: 0.25rem 3rem;
+        padding: 1rem;
+    }
 }
