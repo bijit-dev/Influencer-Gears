@@ -323,7 +323,8 @@ footer .icon{
         
     }
     .featured{
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
 
 
